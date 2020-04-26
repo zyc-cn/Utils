@@ -1,4 +1,4 @@
-package com.zyc.collection;
+package com.zyc.DB;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
@@ -71,7 +71,7 @@ public class JDBCUtils {
      * @return 返回结果集
      */
     public static List<List<Object>> executeQuery(String sql, Connection conn) throws SQLException {
-        ArrayList<List<Object>> dataSet = new ArrayList<>();
+        ArrayList<List<Object>> dataSet = new ArrayList<List<Object>>();
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
@@ -80,7 +80,7 @@ public class JDBCUtils {
             ArrayList<String> columns = getColumns(rs);
             while (rs.next()) {
                 // 填装单行数据
-                ArrayList<Object> line = new ArrayList<>();
+                ArrayList<Object> line = new ArrayList<Object>();
                 for (int i = 0; i < columns.size(); i++) {
                     // 抽象数据类型
                     line.add(rs.getObject(columns.get(i))) ;
