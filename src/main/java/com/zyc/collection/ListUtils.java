@@ -11,22 +11,8 @@ import java.util.List;
  */
 public class ListUtils {
 
-    public static void main(String[] args) {
-        String[] aa = new String[]{"a","b"};
-        List<String> strings1 = Arrays.asList(aa);
-
-        ArrayList<String> strings = new ArrayList<String>();
-        strings.add("aaaa");
-        strings.add("aaab");
-        strings.add("aaac");
-
-        String s = listMkString(strings1, "||");
-        System.out.println(s);
-
-    }
-
     /**
-     * 相当于scala中的mkstring,将list中的元素使用指定分隔符进行拼接，饭后返回，如果是数组，则可以先
+     * 相当于scala中的mkstring,将list中的元素使用指定分隔符进行拼接，饭后返回，如果是数组，则可以先Arrays.asList(aa);
      * @param list
      * @param splitStr
      * @return
